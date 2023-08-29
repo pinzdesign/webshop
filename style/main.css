@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    background-image: url("../img/background.jpg");
+    background-attachment: fixed;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 5px;
+    line-height: 35px;
+    color: white;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+h1, h2 {
+    margin-top: 20px;
+}
+
+.wrapper {
+    margin: 0px auto;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+}
+
+.navmenu {
+    margin-top: 100px;
+}
+
+.navmenu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.navmenu li {
+    width: 100%;
+}
+
+.navmenu a:link,.navmenu a:visited,.navmenu a:active {
+    display: block;
+    padding: 10px;
+    border: 1px solid #fff;
+    transition: all .3s;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.navmenu a:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+footer {
+    margin-top: 30px;
+}
+
+address {
+    border-top: 1px solid white;
+    text-align: center;
+    font-style: normal;
+}
+
+.item_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.item {
+    /*border: 1px solid white;*/
+    background-color: white;
+    color: black;
+    width: 25%;
+    text-align: center;
+}
+
+.item_img img {
+    width: 50%;
+    margin-top: 30px;
+}
+
+.item_info p {
+    font-size: 12px;
+}
+
+.readmore {
+    display: block;
+    background-color: orangered;
+    width: calc(100% - 40px);
+    padding: 20px;
+    font-size: 20px;
+    color: black;
+}
+
+.product_container {
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 35% calc(65% - 10px);
+}
+
+.product_img img {
+    width: 100%;
+}
+
+.buy {
+    display: block;
+    width: 40%;
+    background-color: orangered;
+    color: white;
+    margin-top: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .item_container {
+        flex-wrap: wrap;
+    }
+    .item {
+        width: calc(50% - 5px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navmenu ul {
+        flex-direction: column;
+    }
+    .buy {
+        width: calc(100% - 20px);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .item_container {
+        flex-direction: column;
+    }
+    .item {
+        width: 100%;
+    }
+}
