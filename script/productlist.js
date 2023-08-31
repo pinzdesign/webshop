@@ -1,10 +1,22 @@
-fetch("https://kea-alt-del.dk/t7/api/products?limit=12").then(res=>res.json()).then(data=>showProducts(data));
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+
+if(category) {
+    fetchLink = "https://kea-alt-del.dk/t7/api/products?limit=120&category=" + category;
+    //console.log(fetchLink);
+}
+else {
+    fetchLink = "https://kea-alt-del.dk/t7/api/products?limit=120";
+}
+
+fetch(fetchLink).then(res=>res.json()).then(data=>showProducts(data));
 
 function showProducts(products) {
     products.forEach(showProduct);
 }
 
 function showProduct(product) {
+    //console.log(product);
     // making a clone
     const template = document.querySelector("#item_template").content;
     const copy = template.cloneNode(true);
@@ -27,7 +39,7 @@ function showProduct(product) {
 
         // add a new label node
         const node = document.createElement("span");
-        const node_txt = document.createTextNode("Udsalg -" + product.discount + "%");
+        const node_txt = document.createTextNode("-" + product.discount + "%");
         node.appendChild(node_txt);
         node.classList.add("discount_label");
         copy.querySelector(".item").appendChild(node);

@@ -73,6 +73,22 @@ address {
     font-style: normal;
 }
 
+#cat_item_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.cat_item a {
+    display: block;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
 #item_container {
     display: flex;
     flex-direction: row;

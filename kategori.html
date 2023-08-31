@@ -24,45 +24,15 @@
             </nav>
         </header>
         <main>
-            <h2>Kategori</h2>
-            <p>Her kan du finde vores varer opdelt efter kategorien.</p>
-            <div class="item_container">
-                <div class="item">
-                    <div class="item_img">
-                        <img src="https://kea-alt-del.dk/t7/images/webp/1000/1533.webp" alt="cloth">
+            <h2>Kategorier</h2>
+            <div id="cat_item_container">
+                <template id="cat_template">
+                    <div class="cat_item">
+                        <div class="item_info">
+                            <h3><a href="produktliste.html?category=Footwear">Footwear</a></h3>
+                        </div>
                     </div>
-                    <div class="item_info">
-                        <h3><a href="produktliste.html">Cloth</a></h3>
-                        <p>Her kan du finde tøj</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item_img">
-                        <img src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="footwear">
-                    </div>
-                    <div class="item_info">
-                        <h3><a href="produktliste.html">Footwear</a></h3>
-                        <p>Her kan du finde sko</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item_img">
-                        <img src="img/tshirt_01.png" alt="tshirt">
-                    </div>
-                    <div class="item_info">
-                        <h3><a href="produktliste.html">Accesories</a></h3>
-                        <p>Her kan du finde ting</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item_img">
-                        <img src="img/tshirt_02.png" alt="tshirt">
-                    </div>
-                    <div class="item_info">
-                        <h3><a href="produktliste.html">Bags</a></h3>
-                        <p>Her kan du finde tasker</p>
-                    </div>
-                </div>
+                </template>
             </div>
         </main>
         <footer>
@@ -72,5 +42,6 @@
             </address>
         </footer>
     </div>
+    <script src="script/catlist.js"></script>
 </body>
 </html>
